@@ -1,0 +1,11 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <h1><i class="fab fa-github" style="color:black"></i>&nbsp;<span class="bolder-colored">Git</span><span class="bold-colored">Search</span> </h1>
+  <a class="navbar-brand" href="#"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <form class="form-inline my-2 my-lg-0" (ngSubmit)="displayDetails()">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search for github user" aria-label="Search" name="details" [(ngModel)]="details">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</nav>
