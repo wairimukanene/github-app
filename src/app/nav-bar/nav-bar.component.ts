@@ -1,4 +1,6 @@
+import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+import { ServicesService } from '../services.service';
 import { User } from '../user';
 
 @Component({
@@ -8,13 +10,15 @@ import { User } from '../user';
 })
 export class NavBarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service:ServicesService) { }
 details:any
+user:User
 displayDetails(){
-  console.log(this.details)
-  
+  this.service.getUser(this.details)
+
 }
   ngOnInit(): void {
+  this.user=this.service.user
   }
 
 }
