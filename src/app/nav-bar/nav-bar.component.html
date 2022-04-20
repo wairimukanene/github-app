@@ -1,4 +1,4 @@
-
+<div class="container-fluid">
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <h1><i class="fab fa-github" style="color:black"></i>&nbsp;<span class="bolder-colored">Git</span><span class="bold-colored">Search</span> </h1>
   <a class="navbar-brand" href="#" routerLink="/profile">View Profile</a>
@@ -10,11 +10,16 @@
     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
   </form>
 </nav>
+<div  id="user-details">
+  <div id="profile" class="row">
+    <img class="ml-0 col-5 img-responsive img-circle" src="user.avatar_url" >height="200px" width="100px">
+    <div class="col-5 text-left">
+</div>
 
 <div class="user">
 {{user.login}}
 {{user.public_repos}}
-<img [src]="user.avatar_url">
+<!-- <img [src]="user.avatar_url"> -->
 {{user.created_at}}
 </div>
 
