@@ -11,7 +11,7 @@ export class ServicesService {
   user:User
   
   constructor(private http:HttpClient) { 
-    this.user =new User("","","","")
+    this.user =new User("","","","","")
   }
 
   getUser(username: string){
@@ -21,6 +21,7 @@ export class ServicesService {
 
 	        public_repos:number,
 	        login:string,
+					bio:any,
 	        avatar_url:string,
 	        created_at:Date,    
 	    }
@@ -31,8 +32,10 @@ export class ServicesService {
 	            // Mapping The Response we get to Every Property that we'll Eventually Use to Display in our git-search-results.component.html
 	            this.user.avatar_url=response?.avatar_url;
 	            this.user.login=response?.login;
+							this.user.bio=response?.bio;
 	            this.user.public_repos=response?.public_repos;
 	            this.user.created_at=response?.created_at;
+							
 
 	            resolve()
 	        },

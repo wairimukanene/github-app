@@ -12,17 +12,26 @@
 </nav>
 <div  id="user-details">
   <div id="profile" class="row">
-    <img class="ml-0 col-5 img-responsive img-circle" src="user.avatar_url" >height="200px" width="100px">
+    <img class=" img-responsive img-circle" src={{user.avatar_url}} height="200px" width="150px">
     <div class="col-5 text-left">
+      <p class="login">{{user.login}}</p>
+      <p class="bio">{{user.bio}}</p>
+      <p class="stat">Date Joined: <strong>{{user.created_at|date}}</strong></p>
+      <p class="stat">Number of Repos: <strong>{{user.public_repos}}</strong></p>
+      
 </div>
 
-<div class="user">
+<!-- <div class="user">
 {{user.login}}
 {{user.public_repos}}
-<!-- <img [src]="user.avatar_url"> -->
-{{user.created_at}}
-</div>
+ <img [src]="user.avatar_url"> -->
+<!-- {{user.created_at}}
+</div> --> 
 
 <div *ngFor="let repo of repos">
 {{repo.name}}
+{{repo.full_name}}
+{{repo.description}}
+{{repo.updated_at}}
+
 </div>
