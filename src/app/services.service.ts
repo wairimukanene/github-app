@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { User } from './user';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
@@ -26,7 +27,7 @@ export class ServicesService {
 
 	    let promise =new Promise<void>((resolve,reject)=>{
 	    	// We then use the getmethod and pass to the API URL. we then call the subscribe function that takes in the response function that is called when the API request is successful and returns a response.
-	        this.http.get<ApiResponse>("https://api.github.com/users/" + username).toPromise().then(response=>{
+	        this.http.get<ApiResponse>(environment.api + username).toPromise().then(response=>{
 	            // Mapping The Response we get to Every Property that we'll Eventually Use to Display in our git-search-results.component.html
 	            this.user.avatar_url=response?.avatar_url;
 	            this.user.login=response?.login;
@@ -44,8 +45,11 @@ export class ServicesService {
 	    return promise
           }
           getRepo(username:string):Observable<any[]>{
-           return this.http.get<any[]>("https://api.github.com/users/" + username + "/repos")
+           return this.http.get<any[]>(environment.api + username + "/repos")
           }
+					getMercy():Observable<any>{
+						return this.http.get<any>(environment.api + "wairimukanene")
+					}
         }
 
 

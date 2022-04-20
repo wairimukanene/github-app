@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ServicesService } from '../services.service';
 
 @Component({
   selector: 'app-home-page',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private service:ServicesService) { }
+mercy:any
   ngOnInit(): void {
+    this.service.getMercy().subscribe((data)=>{
+      this.mercy=data
+    })
   }
 
 }
