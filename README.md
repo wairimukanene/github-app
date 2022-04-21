@@ -1,27 +1,46 @@
-# GitSearch
+# Git-Search application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.2.
+A github search app that allows people to find github users by their username and one gets to view their repositories.
 
-## Development server
+## Description
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+This project was generated with Angular CLI version 7.3.6. This is a web app that allows users to search a github username and the users repositories will be displayed alongside his profile details.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Installation
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Clone or download and unzip the repository from github, https://github.com/wairimukanene/github-app.git
+If you have git Use this command git clone * to clone the project.
+Run ng serve from your terminal
+## Live Link
 
-## Running unit tests
+To view the page click on the link below, https://github.com/wairimukanene/github-app.git
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Technologies Used
 
-## Running end-to-end tests
+The languages and frameworks used to develop the quotes web application are Angular, Bootstrap, HTML, Javascript, Typescript and CSS.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+## Known Bugs
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Quick note that The page loads a bit slow due to the hosting, kindly be a little patient everything works just fine.
+There are currently no tests done for this project
+As at the time this project was made, testing was not a major concern.
+The project is currently not being maintaines any more.
+Thanks for understanding.
+## Licence
+
+MIT Licence MIT Copyright (c) 2022 WairimuKanene
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+## Reference
+W3Schools StackOverflow Youtube
+
+## Author information
+Mercy Wairimu Kanene
