@@ -17,8 +17,7 @@
       <p class="login">{{user.login}}</p>
       <p class="bio">{{user.bio}}</p>
       <p class="stat">Date Joined: <strong>{{user.created_at|date}}</strong></p>
-      <p class="stat">Number of Repos: <strong>{{user.public_repos}}</strong></p>
-      
+      <p class="stat">Number of Repos: <strong>{{user.public_repos}}</strong></p> 
 </div>
 
 
@@ -26,13 +25,11 @@
   <div class="card" *ngFor="let repo of repos">
       <div class="card-body">
           <div class="card-title">
-
               <a href="{{repo.html_url}}" style="color:#d19438;" >{{repo.name|uppercase}}</a>
           </div>
           <div>
           <p> {{repo.full_name|uppercase}} </p>
           </div>
-        
             <div class="card-text">
               <p *ngIf="repo.description">{{repo.description}}</p>
               <p *ngIf="!repo.description">No description is available for this repository</p>
@@ -40,30 +37,23 @@
             <div class="card-bottom" appBold>
               <div *ngIf="repo.language"  >
                   <i class="fas fa-circle"></i>&nbsp;{{repo.language}}
-                </div>&nbsp;&nbsp;
-                <div *ngIf="!repo.language">
+              </div>&nbsp;&nbsp;
+              <div *ngIf="!repo.language">
                   <i class="fas fa-circle"></i>&nbsp;Undefined
-                </div>&nbsp;&nbsp;
-                <div class="card-text">
+              </div>&nbsp;&nbsp;
+              <div class="card-text">
                   <p>{{repo.clone_url}}</p> &nbsp;&nbsp;clone
-                  </div>
-                  <div class="card-text">
-                    <p> {{repo.updated_at|date}}</p>&nbsp;&nbsp;update
-                    </div>
-                    <div class="card-text">
-                      <p>{{repo.created_at|date}}</p>  &nbsp;&nbsp;date
-                      </div>
-                  
-            
-
-
-
-
-
+              </div>
+              <div class="card-text">
+                  <p> {{repo.updated_at|date}}</p>&nbsp;&nbsp;update
+              </div>
+              <div class="card-text">
+                  <p>{{repo.created_at|date}}</p>  &nbsp;&nbsp;date
+              </div>
             </div>
           </div>
   </div>
 </div>
-  </div>
+</div>
 </div>
 </div>
