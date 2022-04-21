@@ -27,15 +27,30 @@
  <img [src]="user.avatar_url"> -->
 <!-- {{user.created_at}}
 </div> --> 
+<div class="cards">
+  <div class="card" *ngFor="let repo of repos">
+      <div class="card-body">
+          <div class="card-title">
 
-<div *ngFor="let repo of repos">
-{{repo.name}}
-{{repo.full_name}}
-{{repo.description}}
-{{repo.updated_at}}
-{{repo.html_url}}
-{{repo.clone_url}}
-{{repo.language}}
-{{reo.created_at:|date}}
+              <a href="{{repo.html_url}}" style="color:#d19438;" >{{repo.name|titlecase}}</a>
+          </div>
+        
+            <div class="card-text">
+              <p *ngIf="repo.description">{{repo.description}}</p>
+              <p *ngIf="!repo.description">No description is available for this repository</p>
+            </div>
+            <div class="card-bottom" appBold>
+              <div *ngIf="repo.language"  >
+                  <i class="fas fa-circle"></i>&nbsp;{{repo.language}}
+                </div>&nbsp;&nbsp;
+                <div *ngIf="!repo.language">
+                  <i class="fas fa-circle"></i>&nbsp;Undefined
+                </div>&nbsp;&nbsp;
+            <p> {{repo.full_name}} </p>
+
+<p> {{repo.updated_at}}</p>
+<p>{{repo.clone_url}}</p>
+<p>{{repo.language}}</p>
+<p>{{repo.created_at|date}}</p> 
 
 </div>
