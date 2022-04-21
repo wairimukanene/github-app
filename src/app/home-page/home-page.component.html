@@ -5,5 +5,17 @@
     <span class="navbar-toggler-icon"></span>
   </button>
 </nav>
-{{mercy.name}}
-<img [src]="mercy.avatar_url">
+<div  id="user-details">
+  <div id="profile" class="row">
+    <img class=" img-responsive img-circle" src={{mercy.avatar_url}} height="200px" width="150px">
+    <div class="col-5 text-left">
+      <div class="card-text">
+        <p> {{mercy.name}}</p>&nbsp;&nbsp;Bio
+        </div>
+        <div class="card-text">
+          <p>{{mercy.bio}}</p>  &nbsp;&nbsp;Login
+          </div>
+          <div class="card-text">
+            <p>{{mercy.login}}</p>  &nbsp;&nbsp;
+            </div>
+  
