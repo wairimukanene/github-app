@@ -21,18 +21,16 @@
       
 </div>
 
-<!-- <div class="user">
-{{user.login}}
-{{user.public_repos}}
- <img [src]="user.avatar_url"> -->
-<!-- {{user.created_at}}
-</div> --> 
+
 <div class="cards">
   <div class="card" *ngFor="let repo of repos">
       <div class="card-body">
           <div class="card-title">
 
-              <a href="{{repo.html_url}}" style="color:#d19438;" >{{repo.name|titlecase}}</a>
+              <a href="{{repo.html_url}}" style="color:#d19438;" >{{repo.name|uppercase}}</a>
+          </div>
+          <div>
+          <p> {{repo.full_name|uppercase}} </p>
           </div>
         
             <div class="card-text">
@@ -46,11 +44,26 @@
                 <div *ngIf="!repo.language">
                   <i class="fas fa-circle"></i>&nbsp;Undefined
                 </div>&nbsp;&nbsp;
-            <p> {{repo.full_name}} </p>
+                <div>
+                  <p>{{repo.clone_url}}</p> &nbsp;&nbsp;clone
+                  </div>
+                  <div>
+                    <p> {{repo.updated_at|date}}</p>&nbsp;&nbsp;update
+                    </div>
+                    <div>
+                      <p>{{repo.created_at|date}}</p>  &nbsp;&nbsp;date
+                      </div>
+                  
+            
 
-<p> {{repo.updated_at}}</p>
-<p>{{repo.clone_url}}</p>
-<p>{{repo.language}}</p>
-<p>{{repo.created_at|date}}</p> 
 
+
+
+
+            </div>
+</div>
+  </div>
+</div>
+  </div>
+</div>
 </div>
