@@ -44,13 +44,13 @@
                 <div *ngIf="!repo.language">
                   <i class="fas fa-circle"></i>&nbsp;Undefined
                 </div>&nbsp;&nbsp;
-                <div>
+                <div class="card-text">
                   <p>{{repo.clone_url}}</p> &nbsp;&nbsp;clone
                   </div>
-                  <div>
+                  <div class="card-text">
                     <p> {{repo.updated_at|date}}</p>&nbsp;&nbsp;update
                     </div>
-                    <div>
+                    <div class="card-text">
                       <p>{{repo.created_at|date}}</p>  &nbsp;&nbsp;date
                       </div>
                   
@@ -61,7 +61,7 @@
 
 
             </div>
-</div>
+          </div>
   </div>
 </div>
   </div>
